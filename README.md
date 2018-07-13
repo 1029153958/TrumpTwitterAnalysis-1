@@ -12,7 +12,10 @@
 <br>
 
 ### 最高喜欢
-![video](./img/FraudNewsCNN FNN.mp4)
+<video style="width:100%" controls>
+  <source src="./img/FraudNewsCNN FNN.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 <br>
 
 ### 最高转发
