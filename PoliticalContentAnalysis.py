@@ -1,15 +1,21 @@
-content=[]
+def normal(sentence, val=" "):
+    sentence = sentence.lower()
+    replace = ["\n", ":", ".", "/", "\"", "@", "'", "-", "“", "”", "!"]
+    for word in replace:
+        sentence = sentence.replace(word, val)
+    return sentence
+
+contents=[]
 with open("./single/content.csv","r",encoding="utf-8") as f:
     line=f.readline()
     while(line!=""):
-        sentence=(line.replace("\n"," ")).lower()
-        if('russia' in line or 'frances' in line):
-            content.append(line)
+        sentence=normal(line).lower()
+        if('china' in line or 'chinese' in line):
+            contents.append(line)
         line=f.readline()
 
-print(len(content))
-for i in content:
-    print(i.replace("\n"," "))
+for content in contents:
+    print(content.replace("\n"," "))
 
 #         总数 中立-反对-赞成
 # China: 12 4-8-0
