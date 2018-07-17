@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trump's Twitter Analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function twitterTimeButton(){
+        alert("凌晨2：00到3：00之间有一个发推小高峰\n"+
+            "下午13：00到14：00有一个发推较高峰\n"+
+            "晚上19：30到20：30有一个发推最高峰");
+        }
+        function twitterNumberButton(){
+            alert("2012年到2016年间沉迷发推无法自拔，增速最快。");
+        }
+        function twitterMostOftenWordsButton(){
+            var img=document.getElementById("twitterMostOftenWordsImg");
+            if(img.src=="http://www.wangxinshuo.cn/image/1.png"){
+                img.src="./image/关键字.png";
+            }else{
+                img.src="./image/1.png";
+            }
+            alert("Twitter中提及的主要内容总结：\n"+
+                "政治人物：巴拉克奥巴马、希拉里克林顿\n"+
+                "政治方向：工作、就业\n"+
+                "运动：高尔夫\n"+
+                "新闻媒体：福克斯新闻网、CNN新闻\n"+
+                "口号：MakeAmericanGreatAgain、Trump2016\n"+
+                "国家：中国\n");
+        }
+        function twitterMostAtButton(){
+            var img=document.getElementsByClassName('twitterMostAtImg')[0];
+            if(img.src=="http://www.wangxinshuo.cn/image/a.png"){
+                img.src="./image/b.png";
+                return;
+            }
+            if(img.src=="http://www.wangxinshuo.cn/image/b.png"){
+                img.src="./image/c.png";
+                return;
+            }
+            if(img.src=="http://www.wangxinshuo.cn/image/c.png"){
+                img.src="./image/2.png";
+                return;
+            }     
+            if(img.src=="http://www.wangxinshuo.cn/image/2.png"){
+                img.src="./image/a.png";
+                return;
+            }
+        }
+        function twitterJapanButton(){
+            alert("关键字：\n共建更好的军事关系、新TPP协定");
+        }
+        function twitterEngland(){
+            alert("关键字：\n迎光临白宫、超级碗、英国新闻");
+        }
+        function twitterRussia(){
+            alert("关键字：\n双边关系、间谍事件、\nRussia and the world has already started to respect us again!")
+        }
+        function twitterChian(){
+            alert("关键字：\n批评了奥巴马、布什的对中国政策，\n声明中国在非洲的军事威胁，抵制中国货");
+        }
+    </script>
+    <style>
+        .twitterTime,.twitterNumber{
+            height: 473px;
+            width: 640px;
+        }
+        .twitterMostLiked{
+            width: 640px;
+            height: 378;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>嘴炮川普的Twitter分析</h1></center>
+    <center>
+        <br><br>
+        <h2>
+            <p>爬取了2009/5/5 2:54:25（美国东部时间）到2018/7/13 1:53:20的共计34737条推特。</p>
+            <p>爬取的内容格式包括对应的Twitter ID、Twitter内容、创立时间、转发数量与喜欢数量。</p>
+        </h2>        
+        <br><br>
+    </center>
+
+    <center>
+        <h3>每日发推时间分析</h3>
+        <div class="twitterTimeBox">
+            <img class="twitterTime" src="./image/发推时间.png" alt="">
+            <br>
+            <input type="button" value="分析结果" onclick="twitterTimeButton()">
+        </div>        
+        <br><br><br>
+    </center>
+
+    <center>
+        <h3>2009年至今发推增速对比</h3>
+        <div class="twitterNumberBox">
+            <img class="twitterNumber" src="./image/发推增速.png" alt="">
+            <br>
+            <input type="button" value="分析结果" onclick="twitterNumberButton()">
+        </div>
+        <br><br><br>
+    </center>
+
+    <center>
+        <h3>最高赞Twitter</h3>
+        <div class="twitterMostLiked">
+            <img src="./image/最高喜欢.png" alt="">
+            <br>
+        </div>
+        <br><br><br>
+    </center>
+
+    <center>
+        <h3>最高转发Twitter</h3>
+        <div class="twitterMostRetwitter">
+            <video src="./image/FraudNewsCNN FNN.mp4" controls="controls"></video>
+        </div>
+        <br><br><br>
+    </center>
+
+    <center>
+        <h3>Trump的Twitter中出现频率最高的词语</h3>
+        <div class="twitterMostOftenWords">
+            <img id="twitterMostOftenWordsImg" src="./image/关键字.png" alt="">
+            <br>
+            <input type="button" value="分析结果" onclick="twitterMostOftenWordsButton()">
+        </div>
+        <br><br><br>
+    </center>
+
+    <center>
+        <h3>Trump的Twitter中@频率最高的人物</h3>
+        <div class="twitterMostAt">
+            <img class="twitterMostAtImg" src="./image/a.png" alt="">
+            <br>
+            <input type="button" value="切换结果" onclick="twitterMostAtButton()">
+        </div>
+        <br><br><br>
+    </center>
+
+
+    <hr>
+    <center>
+        <h3>Twitter中提及的国家及其占比</h3>
+        <div class="twitterAtCountry">
+            <img src="./image/各国占比.png" alt="">
+            <br>
+        </div>
+        <br><br><br>
+    </center>
+
+    <center>
+        <h3>Twitter中对日本的积极、消极、中立态度占比</h3>
+        <div class="twitterJapan">
+            <img src="./image/对日本态度.png" alt="">
+            <br>
+        </div>
+        <input type="button" value="Twitter中关于日本的内容概要" onclick="twitterJapanButton()">
+    </center>
+
+    <center>
+        <div class="twitterEngland">
+            <h3>Twitter中对英国的积极、消极、中立态度占比</h3>
+            <img src="./image/对英国态度.png" alt="">
+            <br>
+        </div>
+        <input type="button" value="Twitter中关于英国的内容概要" onclick="twitterEngland()">
+        <br><br><br>
+    </center>
+
+    <center>
+            <h3>Twitter中对俄罗斯的积极、消极、中立态度占比</h3>
+        <div class="twitterRussia">
+            <img src="./image/对俄罗斯态度.png" alt="">
+            <br>
+        </div>
+        <input type="button" value="Twitter中关于俄罗斯的内容概要" onclick="twitterRussia()">
+        <br><br><br>
+    </center>
+
+    <center>
+        <h3>Twitter中对中国的积极、消极、中立态度占比</h3>
+        <div class="twitterChina">
+            <img src="./image/对中国态度.png" alt="">
+            <br>
+        </div>
+        <input type="button" value="Twitter中关于中国的内容概要" onclick="twitterChian()">
+        <br><br><br>
+    </center>
+
+    <center>
+        <h3><a href="./trump.html">Trump人物画像</a></h3>
+    </center>
+    <br><br><br>
+
+<hr>
+
+    <center>
+        <br><br><br>
+        <a href="https://github.com/wangxinshuo426/TrumpTwitterAnalysis" style="text-decoration: none ; text-decoration-color: gray">GitHub地址</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" style="text-decoration: none; text-decoration-color: gray">工信部备案查询</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://www.aliyun.com/" style="text-decoration: none">阿里云</a>提供云服务支持
+        &nbsp;&nbsp;&nbsp;
+        感谢<a href="http://www.getlandeng9.org/" style="text-decoration: none">蓝灯</a>提供梯子支持
+        &nbsp;&nbsp;&nbsp;
+        感谢Twitter网友<a href="https://twitter.com/realDonaldTrump" style="text-decoration: none">Trump</a>提供数据支持
+        <br><br><br>
+        
+    </center>
+</body>
+</html>
