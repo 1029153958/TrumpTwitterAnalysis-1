@@ -70,6 +70,7 @@
 
 ### 代码说明
 * img文件夹内分析之后媒体文件
+* HTML文件夹内放置的的是用于展示的HTML文件
 * data文件夹下放置爬取下来的文件，以csv格式存储，文件格式为["id","content","user_id",'user_screen_name','user_name','created_at','retweets','favorites']
 * single文件夹下放入的是分离出来的data.csv文件，根据文件名可以获得相应数据
 
